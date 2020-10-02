@@ -10,14 +10,15 @@
 
 This plugin provide a connection for databases(ORACLE, MYSQL and POSTGRES)
 
-To connect in one of this databases:
+Follow the exemple below to connect in one of this databases:
 
+Past this code in your Jenkinsfile and execute this with yours parameters.
 
 ```
 node {
-def result = databaseConnect(
+def result = dataBaseConnect(
         [
-        	dbTyp: 'POSTGRES', -> POSTGRES/ORACLE/MYSQL
+            dbTyp: 'POSTGRES', -> POSTGRES/ORACLE/MYSQL
             database: 'dbname', 
             host: 'hostname', 
             user: 'username', 
