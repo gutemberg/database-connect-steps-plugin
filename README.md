@@ -12,21 +12,24 @@ This plugin provide a connection for databases(ORACLE, MYSQL and POSTGRES)
 
 To connect in one of this databases:
 
+
+```
 node {
-    def result = databaseConnect(
-            [
-            	dbTyp: 'POSTGRES', -> POSTGRES/ORACLE/MYSQL
-                database: 'dbname', 
-                host: 'hostname', 
-                user: 'username', 
-                password: 'password', 
-                port: 'port', 
-                query: "select teste ..."
-            ]
-        )
+def result = databaseConnect(
+        [
+        	dbTyp: 'POSTGRES', -> POSTGRES/ORACLE/MYSQL
+            database: 'dbname', 
+            host: 'hostname', 
+            user: 'username', 
+            password: 'password', 
+            port: 'port', 
+            query: "select teste ..."
+        ]
+    )
 
     echo result.query[0].teste
 }
+```
 
 This plugin allow recovery a json result.
 
